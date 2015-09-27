@@ -1,7 +1,14 @@
-# Gol
+# Conway's Game of Life in Ember
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+I am using this project to help me learn Ember. I took most of this code from
+https://github.com/MattMSumner/gol and am planning on adding the following
+features:
+
+* Allow user to create their own inital board by clicking on cells to make them
+alive
+* Adding bootstrap
+* Showing cells groups that are in a stable state (haven't changed since the 
+previous step)
 
 ## Prerequisites
 
