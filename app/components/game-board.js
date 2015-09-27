@@ -51,7 +51,7 @@ function generateBoard(width, height, initialState) {
       if ([true, false].contains(initialState && initialState[i] && initialState[i][j])) {
         alive = initialState[i][j];
       } else {
-        alive = Math.random() > 0.8;
+        alive = false;
       }
 
       const cell = Cell.create({alive});

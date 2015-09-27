@@ -1,31 +1,57 @@
 <h2 id="title">Karen's Game of Life</h2>
 
-<div>
-  <label for='#width-input'>Width</label>
-  <input
-    id="board-width"
-    type="range"
-    value={{width}}
-    min="3"
-    max="70"
-    oninput={{action (mut widthPreview) value='target.value'}}
-    onchange={{action (mut width) value='target.value'}}>
-  {{widthPreview}}
+<div class="row-fluid">
+  <div class="col-md-3 sidebar">
+    <div class="row-fluid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Board Size
+        </div>
+        <div class="panel-body">
+          <div>
+            <label for='#width-input'>Width</label>
+            <input
+              id="board-width"
+              type="range"
+              value={{width}}
+              min="3"
+              max="70"
+              oninput={{action (mut widthPreview) value='target.value'}}
+              onchange={{action (mut width) value='target.value'}}>
+            {{widthPreview}}
+          </div>
+          <div>
+            <label for='#width-height'>Height</label>
+            <input
+              id="board-height"
+              type="range"
+              value={{height}}
+              min="3"
+              max="70"
+              oninput={{action (mut heightPreview) value='target.value'}}
+              onchange={{action (mut height) value='target.value'}}>
+            {{heightPreview}}
+          </div>
+         </div>
+       </div>
+
+       <div class="row-fluid">
+         <div class="panel panel-default">
+           <div class="panel-heading">
+             Update Board
+           </div>
+           <div class="panel-body">
+             <button class="btn btn-default">Step</button>
+             <button class="btn btn-default">Play</button>
+           </div>
+         </div>
+       </div>
+    </div>
+    <!-- end sidebar -->
+  </div>
+  <div class="col-md-9 board-div">
+    {{game-board width=width height=height}}
+  </div>
 </div>
 
-<div>
-  <label for='#width-height'>Height</label>
-  <input
-    id="board-height"
-    type="range"
-    value={{height}}
-    min="3"
-    max="70"
-    oninput={{action (mut heightPreview) value='target.value'}}
-    onchange={{action (mut height) value='target.value'}}>
-  {{heightPreview}}
-</div>
 
-{{game-board width=width height=height}}
-
-{{outlet}}

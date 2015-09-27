@@ -6,9 +6,9 @@
   </div>
 {{/each}}
 
-<button {{action 'step'}} data-role='step-action'>Step</button>
+<button {{action 'step'}} class="btn btn-primary" data-role='step-action'>Step</button>
 
-<button {{action 'togglePlay'}} data-role='play-action'>
+<button {{action 'togglePlay'}} class="btn btn-primary" data-role='play-action'>
   {{#if playing}}
     pause
   {{else}}
