@@ -23,6 +23,10 @@ export default Ember.Component.extend({
       if (playing) { this.send('step'); }
     },
 
+    toggleActive(cell) {
+      cell.toggleProperty('alive');
+    },
+
     step() {
       const board = this.get('board');
 
